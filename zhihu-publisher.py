@@ -67,10 +67,11 @@ def rename_image_ref(m, original=True):
             image_ref_name = Path(m.group(2)).name
         else:
             image_ref_name = Path(m.group(1)).name
+
     if original:
-        return "![" + m.group(1) + "](" + GITHUB_REPO_PREFIX + str(image_folder_path.name) + "/" + image_ref_name + ")"
+        return "![" + m.group(1) + "](" + GITHUB_REPO_PREFIX + str(image_folder_path) + "/" + image_ref_name + ")"
     else:
-        return '<img src="' + GITHUB_REPO_PREFIX + str(image_folder_path.name) + "/" + image_ref_name + '"'
+        return '<img src="' + GITHUB_REPO_PREFIX + str(image_folder_path) + "/" + image_ref_name + '"'
 
 
 # Search for the image links which appear in the markdown file. It can handle two types: ![]() and <img src="LINK" alt="CAPTION" style="zoom:40%;" />.
@@ -135,5 +136,5 @@ if __name__ == "__main__":
     else:
         args.input = Path(args.input)/Path("text.md")
         image_folder_path = args.input.parent /Path("imgs")
-        #print([image_folder_path,"1",args.input.parent,"1",args.input.stem,"1",image_folder_path])
+        print([image_folder_path])
         process_for_zhihu()
