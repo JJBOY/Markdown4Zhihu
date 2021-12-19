@@ -17,7 +17,7 @@ from shutil import copyfile
 ###############################################################################################################
 # GITHUB_REPO_PREFIX = Path("https://raw.githubusercontent.com/`YourUserName`/`YourRepoName`/master/Data/")
 # Your image folder remote link
-GITHUB_REPO_PREFIX = "https://raw.githubusercontent.com/JJBOY/Markdown4Zhihu/master/Data/"
+GITHUB_REPO_PREFIX = "https://raw.githubusercontent.com/JJBOY/Markdown4Zhihu/master/"
 COMPRESS_THRESHOLD = 5e5  # The threshold of compression
 
 
@@ -67,11 +67,11 @@ def rename_image_ref(m, original=True):
             image_ref_name = Path(m.group(2)).name
         else:
             image_ref_name = Path(m.group(1)).name
-
+    print('<img src="' + GITHUB_REPO_PREFIX + str(image_folder_path) + "/" + image_ref_name + '"')
     if original:
-        return "![" + m.group(1) + "](" + GITHUB_REPO_PREFIX + str(image_folder_path) + "/" + image_ref_name + ")"
+        return "![" + m.group(1) + "](" + GITHUB_REPO_PREFIX + str(image_folder_path).replace("\\","/") + "/" + image_ref_name + ")"
     else:
-        return '<img src="' + GITHUB_REPO_PREFIX + str(image_folder_path) + "/" + image_ref_name + '"'
+        return '<img src="' + GITHUB_REPO_PREFIX + str(image_folder_path).replace("\\","/") + "/" + image_ref_name + '"'
 
 
 # Search for the image links which appear in the markdown file. It can handle two types: ![]() and <img src="LINK" alt="CAPTION" style="zoom:40%;" />.
