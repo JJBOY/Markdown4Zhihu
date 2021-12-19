@@ -160,8 +160,8 @@ if __name__ == '__main__':
 拟合结果如下：最小二乘法vs梯度下降法
 
 <figure class="half">
-<img src="https://github.com/JJBOY/Markdown4Zhihu/master/Data/线性回归&逻辑回归/image-20210919215235186.png" style="zoom:40%">
-<img src="https://github.com/JJBOY/Markdown4Zhihu/master/Data/线性回归&逻辑回归/image-20210919215326173.png" style="zoom:40%">
+<img src="https://github.com/JJBOY/Markdown4Zhihu/master/Data/imgs/image-20210919215235186.png" style="zoom:40%">
+<img src="https://github.com/JJBOY/Markdown4Zhihu/master/Data/imgs/image-20210919215326173.png" style="zoom:40%">
 </figure>
 
 
@@ -171,7 +171,7 @@ if __name__ == '__main__':
 
 线性回归解决的是回归问题，还有一类常见的问题就是分类问题，如下图，有一堆黄色的点和紫色的点，可以明显的看出，能用一条直线将两种不同颜色的点大致分隔开来，所以二元逻辑回归也是求解一条直线方程，这也是逻辑回归往往都放在线性回归后面一起讲的原因。
 
-<img src="https://github.com/JJBOY/Markdown4Zhihu/master/Data/线性回归&逻辑回归/image-20210802180738007.png" alt="image-20210802180738007" style="zoom: 67%;" />
+<img src="https://github.com/JJBOY/Markdown4Zhihu/master/Data/imgs/image-20210802180738007.png" alt="image-20210802180738007" style="zoom: 67%;" />
 
 同样的，假设该直线方程的向量乘法的形式为：
 
@@ -185,7 +185,7 @@ if __name__ == '__main__':
 " class="ee_img tr_noresize" eeimg="1">
 函数图像如下：
 
-![Sigmoid 函數_RAIS99146 - MdEditor](https://github.com/JJBOY/Markdown4Zhihu/master/Data/线性回归&逻辑回归/d02fd8bb5d734de79c9ad92cfd905d39~tplv-k3u1fbpfcp-zoom-1.image)
+![Sigmoid 函數_RAIS99146 - MdEditor](https://github.com/JJBOY/Markdown4Zhihu/master/Data/imgs/d02fd8bb5d734de79c9ad92cfd905d39~tplv-k3u1fbpfcp-zoom-1.image)
 
 当然选择不止sigmoid这一个函数，理论上只要满足定义域为全体实数，值域是[0,1]的所有可导函数都是满足要求的，但是目前大家还是默认选择sigmoid函数。
 
@@ -288,5 +288,5 @@ if __name__ == '__main__':
 
 拟合结果如下
 
-<img src="https://github.com/JJBOY/Markdown4Zhihu/master/Data/线性回归&逻辑回归/image-20210802212228669.png" alt="image-20210802212228669" style="zoom:67%;" />
+<img src="https://github.com/JJBOY/Markdown4Zhihu/master/Data/imgs/image-20210802212228669.png" alt="image-20210802212228669" style="zoom:67%;" />
 

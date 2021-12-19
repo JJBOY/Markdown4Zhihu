@@ -133,6 +133,7 @@ if __name__ == "__main__":
     if args.input is None:
         raise FileNotFoundError("Please input the file's path to start!")
     else:
-        args.input = Path(args.input)
-        image_folder_path = args.input.parent / (args.input.stem)
+        args.input = Path(args.input)/Path("text.md")
+        image_folder_path = args.input.parent /Path("imgs")
+        #print([image_folder_path,"1",args.input.parent,"1",args.input.stem,"1",image_folder_path])
         process_for_zhihu()
